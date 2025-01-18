@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+  <script>
+    // Correct way to add mixed data types using DOM manipulation
+    let div = document.getElementById("myDiv");
+    let newParagraph = document.createElement("p");
+    newParagraph.textContent = "This is a paragraph.";
+    div.appendChild(newParagraph);
+    
+    let newNumber = document.createElement('span');
+    newNumber.textContent = "123";
+    div.appendChild(newNumber);
+  </script>
+</body>
+</html>
